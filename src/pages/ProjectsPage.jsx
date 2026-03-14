@@ -41,7 +41,7 @@ export default function ProjectsPage() {
           <span className="section-eyebrow">Portfolio</span>
           <h1 className="page-hero-title">All <span style={{ color:"var(--yellow)" }}>Projects</span></h1>
           <p className="page-hero-sub">
-            A collection of backend systems, Web3 contracts, CLI tools, and APIs.
+            A collection of full-stack and backend systems, Web3 contracts and CLI tools.
           </p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
           {/* Filter buttons */}
           <FadeIn>
             <div className="projects-filter">
-              {["All", "RUST", "PYTHON", "TYPESCRIPT", "SOLANA", "CLI", "DOCKER"].map(tag => (
+              {["All", "RUST", "PYTHON", "TYPESCRIPT", "SOLANA", "CLI"].map(tag => (
                 <button
                   key={tag}
                   className={`filter-btn ${filter === tag ? "active" : ""}`}

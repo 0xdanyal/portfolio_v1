@@ -31,8 +31,8 @@ export default function Navbar({ current, onNavigate }) {
       <nav className={`navbar ${scrolled || menuOpen ? "scrolled" : ""}`}>
         {/* Logo */}
         <a className="navbar-logo" onClick={() => handleNav("HOME")} style={{ cursor: "pointer" }}>
-          <div className="navbar-logo-box">G</div>
-          <span className="navbar-logo-name">Granday</span>
+          <div className="navbar-logo-box">D</div>
+          <span className="navbar-logo-name">Danyal</span>
         </a>
 
         {/* Desktop center links */}
