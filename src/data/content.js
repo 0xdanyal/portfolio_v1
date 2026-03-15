@@ -9,7 +9,7 @@ export const OWNER = {
   tagline: ["Danyal.", "Software Engineer.",  "SQL Optimizer.", "Rust Developer.", "Web3 Builder.", "Backend Engineer."],
   bio: `Building scalable backend and AI-powered web applications using
         JavaScript, Python, and Rust. Exploring Solana-based Web3 systems
-        and intelligent automation for the decentralised future.`,
+         for the decentralised future.`,
   longBio: `I'm a mid-level Backend Engineer with 4+ years of experience crafting
     high-performance distributed systems. I specialise in Python, TypeScript, JavaScript,
     and Rust - with a growing focus on Solana smart contracts and Web3 infrastructure.
@@ -97,7 +97,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: "Brainly",
-    desc: "High-throughput async REST API gateway serving 50k+ requests/day with Redis caching, JWT auth, rate limiting, and auto-generated OpenAPI docs.",
+    desc: "A full-stack app aims to act like yout second brain, where you can save your notes, todos, links and any other piece of information in an organised way. It has a powerful search functionality that allows you to quickly find any saved item. Built with React, Node.js, Express and MongoDB.",
     image: "/projects/brainly.jpg",
     imageBg: "#0f2618",
     tags: ["React", "Node.js", "Express", "MongoDB", "TYPESCRIPT"],
