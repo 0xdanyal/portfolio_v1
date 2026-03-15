@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { OWNER, PROJECTS, STATS, SKILLS } from "../data/content";
+import { OWNER, PROJECTS, SKILLS } from "../data/content";
 import { useTypewriter, useInView } from "../components/hooks";
 import ProjectCard from "../components/ProjectCard";
 import "../styles/globals.css";
@@ -264,17 +264,12 @@ export default function HomePage({ onNavigate }) {
 
         <div className="hero-content">
           <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.1s forwards" }}>
-            <div className="availability-badge" style={{ display:"inline-flex", marginBottom:28 }}>
-              <span className="dot" />{OWNER.availability}
-            </div>
-          </div>
-          <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.25s forwards" }}>
             <div className="hero-typewriter">{typed}<span className="hero-cursor" /></div>
           </div>
-          <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.4s forwards" }}>
+          <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.25s forwards" }}>
             <p className="hero-desc">{OWNER.bio}</p>
           </div>
-          <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.55s forwards" }}>
+          <div style={{ opacity:0, animation:"fadeInUp 0.7s 0.4s forwards" }}>
             <div className="hero-ctas">
               <button className="btn btn-primary" onClick={() => onNavigate("PROJECTS")}>Explore Projects →</button>
               <button className="btn btn-outline" onClick={() => onNavigate("CONTACT")}>Hire Me ☆</button>
@@ -283,30 +278,13 @@ export default function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      {/* ══ STATS STRIP ═══════════════════════════════ */}
-      <div style={{ background:"var(--bg2)", borderTop:"1px solid var(--border)", borderBottom:"1px solid var(--border)", padding:"40px 0" }}>
-        <div className="container">
-          <div className="stats-row">
-            {STATS.map((s, i) => (
-              <FadeIn key={s.label} delay={i * 0.09}>
-                <div style={{ padding:"0 20px", borderRight: i < STATS.length - 1 ? "1px solid var(--border)" : "none", textAlign:"center" }}>
-                  <div style={{ fontSize:"clamp(28px,4vw,48px)", fontWeight:800, color:"var(--yellow)", letterSpacing:"-0.02em", lineHeight:1, marginBottom:6 }}>{s.num}</div>
-                  <div style={{ fontFamily:"var(--font-mono)", fontSize:12, color:"var(--text-dim)", letterSpacing:"0.06em" }}>{s.label}</div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* ══ FEATURED PROJECTS ═════════════════════════ */}
       <section className="section" style={{ position:"relative", overflow:"hidden" }}>
         <div className="orb orb-gold" style={{ width:420, height:420, left:"-140px", top:"10%", opacity:0.85 }} />
         <div className="orb" style={{ width:300, height:300, right:"-80px", bottom:"5%", background:"radial-gradient(circle, #2a2a2a 0%, #111 60%, transparent 100%)", opacity:0.5, animationDelay:"3s" }} />
         <div className="container" style={{ position:"relative", zIndex:1 }}>
           <FadeIn>
-            <div style={{ textAlign:"center", marginBottom:56 }}>
-              <span className="section-eyebrow">Work</span>
+            <div style={{ textAlign:"center", marginBottom:40 }}>
               <h2 className="section-title">Featured <span>Projects</span></h2>
             </div>
           </FadeIn>
@@ -316,7 +294,7 @@ export default function HomePage({ onNavigate }) {
             ))}
           </div>
           <FadeIn>
-            <div style={{ textAlign:"center", marginTop:48 }}>
+            <div style={{ textAlign:"center", marginTop:32 }}>
               <button className="btn btn-outline" onClick={() => onNavigate("PROJECTS")}>View All Projects →</button>
             </div>
           </FadeIn>
@@ -327,7 +305,7 @@ export default function HomePage({ onNavigate }) {
       <section className="section" style={{ background:"var(--bg2)", borderTop:"1px solid var(--border)", borderBottom:"1px solid var(--border)" }}>
         <div className="container">
           <FadeIn>
-            <div style={{ textAlign:"center", marginBottom:56 }}>
+            <div style={{ textAlign:"center", marginBottom:40 }}>
               <span className="section-eyebrow">Expertise</span>
               <h2 className="section-title">Technical <span>Skills</span></h2>
               <p style={{ color:"var(--text-muted)", maxWidth:480, margin:"12px auto 0", fontSize:15 }}>

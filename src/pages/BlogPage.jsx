@@ -116,7 +116,7 @@ export default function BlogPage() {
       {/* ── Header ── */}
       <div style={{ textAlign: "center", padding: "48px 24px 60px" }}>
         <h1 style={{ fontSize: "clamp(32px,5vw,56px)", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: 16 }}>
-          Blog
+          Blogs
         </h1>
         <p style={{ fontSize: 16, color: "var(--text-muted)", maxWidth: 500, margin: "0 auto", lineHeight: 1.8 }}>
           Thoughts on web development, technology trends, and lessons learned along the way.

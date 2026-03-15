@@ -1,4 +1,4 @@
-import { OWNER, SKILLS, STATS } from "../data/content";
+import { OWNER, STATS } from "../data/content";
 import { useTypewriter, useInView } from "../components/hooks";
 import "../styles/globals.css";
 import "../styles/pages.css";
@@ -41,7 +41,7 @@ function SocialBtn({ href, children, label }) {
 /* Skills grouped by category (from the screenshot layout) */
 const SKILL_GROUPS = [
   { title: "Blockchain", tags: ["Solana", "Smart Contract", "@solana/web3.js", "Anchor", "SPL Tokens"] },
-  { title: "Cloud & DevOps Tools", tags: ["AWS", "Azure", "Git", "GitHub", "VS Code", "Nginx", "Docker", "GitHub Actions"] },
+  // { title: "Cloud & DevOps Tools", tags: ["AWS", "Azure", "Git", "GitHub", "VS Code", "Nginx", "Docker", "GitHub Actions"] },
   { title: "Databases", tags: ["MongoDB (NoSQL)", "PostgreSQL", "MySQL", "Redis"] },
   { title: "Frontend", tags: ["React.js", "Vue.js", "Tailwind CSS", "Bootstrap", "Next.js"] },
   { title: "Backend", tags: ["Node.js", "FastAPI", "NestJS", "Express", "Django"] },
@@ -52,12 +52,10 @@ export default function AboutPage({ onNavigate }) {
   const typed = useTypewriter([`Hi, I'm ${OWNER.name}`]);
 
   const downloadCV = () => {
-    const text = `${OWNER.name} — CV\n\nEmail: ${OWNER.email}\nLocation: ${OWNER.location}\n\n${OWNER.longBio}`;
-    const blob = new Blob([text], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
-    a.href = url; a.download = `${OWNER.name.replace(" ","_")}_CV.txt`; a.click();
-    URL.revokeObjectURL(url);
+    a.href = "/danyal_FS_CV.pdf";
+    a.download = "CV.pdf";
+    a.click();
   };
 
   return (

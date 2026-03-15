@@ -54,12 +54,7 @@ export default function Navbar({ current, onNavigate }) {
             <span className="dot" />
             {OWNER.availability}
           </div>
-          <button
-            className="btn btn-primary btn-sm"
-            onClick={() => handleNav("CONTACT")}
-          >
-            Hire Me
-          </button>
+         
 
           {/* Hamburger — only visible on mobile via CSS */}
           <button

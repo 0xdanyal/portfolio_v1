@@ -179,7 +179,7 @@ export default function Footer({ onNavigate }) {
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, lineHeight: 1.9 }}>
               <div style={{ color: "var(--text-dim)" }}><span style={{ color: "var(--yellow)", opacity: 0.6 }}>&gt; </span>system.initialize()</div>
               <div style={{ color: "var(--text-dim)" }}><span style={{ color: "var(--yellow)", opacity: 0.6 }}>&gt; </span>fetching_latest.build...</div>
-              <div style={{ color: "var(--yellow)", opacity: 0.75 }}><span>&gt; </span>portfolio_v1.0.2.stable</div>
+              <div style={{ color: "var(--yellow)", opacity: 0.75 }}><span>&gt; </span>portfolio_v1 stable</div>
             </div>
           </div>
         </div>

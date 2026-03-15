@@ -31,14 +31,13 @@ export default function ProjectsPage() {
       <div style={{
         background:"linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%)",
         borderBottom:"1px solid var(--border)",
-        padding:"64px 0 52px",
+        padding:"48px 0 40px",
         textAlign:"center",
         position:"relative",
         overflow:"hidden",
       }}>
         <div className="geo-bg" />
         <div className="container" style={{ position:"relative", zIndex:1 }}>
-          <span className="section-eyebrow">Portfolio</span>
           <h1 className="page-hero-title">All <span style={{ color:"var(--yellow)" }}>Projects</span></h1>
           <p className="page-hero-sub">
             A collection of full-stack and backend systems, Web3 contracts and CLI tools.

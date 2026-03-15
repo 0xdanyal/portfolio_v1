@@ -17,7 +17,7 @@ function FadeIn({ children, delay = 0 }) {
 }
 
 const WHY_WORK = [
-  `${OWNER.stats ? OWNER.stats[0].num : "4+"}+ years of professional experience`,
+  `${OWNER.stats ? OWNER.stats[0].num : "4+"} years of professional experience`,
   "Full-stack & backend development expertise",
   "Strong focus on performance & clean architecture",
   "Agile development methodology",
@@ -176,7 +176,7 @@ export default function ContactPage({ onNavigate }) {
                   </li>
                 ))}
               </ul>
-
+{/* 
               <div style={{ marginTop: 32, paddingTop: 24, borderTop: "1px solid var(--border)" }}>
                 <button onClick={() => onNavigate("CONTACT")} className="btn btn-primary"
                   style={{ width: "100%", justifyContent: "center", display: "flex", alignItems: "center", gap: 8, borderRadius: 100 }}>
@@ -185,7 +185,7 @@ export default function ContactPage({ onNavigate }) {
                   </svg>
                   Start a Conversation
                 </button>
-              </div>
+              </div> */}
             </div>
           </FadeIn>
         </div>
