@@ -45,7 +45,7 @@ function CoverPlaceholder({ post }) {
 }
 
 /* Blog card — matching the reference screenshot */
-function BlogCard({ post, delay }) {
+function BlogCard({ post, delay, onNavigate }) {
   return (
     <FadeIn delay={delay}>
       <div style={{
@@ -56,6 +56,7 @@ function BlogCard({ post, delay }) {
         cursor: "pointer",
         transition: "border-color 0.2s, transform 0.2s",
       }}
+        onClick={() => onNavigate(`BLOG_DETAIL:${post.id}`)}
         onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(245,200,66,0.3)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
         onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; }}
       >
@@ -110,7 +111,7 @@ function BlogCard({ post, delay }) {
   );
 }
 
-export default function BlogPage() {
+export default function BlogPage({ onNavigate }) {
   return (
     <div style={{ paddingTop: 72 }}>
       {/* ── Header ── */}
@@ -125,9 +126,9 @@ export default function BlogPage() {
 
       {/* ── Blog grid ── */}
       <div className="container" style={{ marginBottom: 80 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 24 }}>
+        <div className="blog-grid">
           {POSTS.map((post, i) => (
-            <BlogCard key={post.id} post={post} delay={i * 0.07} />
+            <BlogCard key={post.id} post={post} delay={i * 0.07} onNavigate={onNavigate} />
           ))}
         </div>
       </div>

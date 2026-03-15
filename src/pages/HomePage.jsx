@@ -60,9 +60,9 @@ function SiteFooter({ onNavigate }) {
                   width: 40, height: 40, background: "var(--yellow)",
                   borderRadius: 10, display: "flex", alignItems: "center",
                   justifyContent: "center", fontWeight: 900, fontSize: 18, color: "#000",
-                }}>G</div>
+                }}>{OWNER.initials}</div>
                 <div>
-                  <div style={{ fontWeight: 800, fontSize: 17, letterSpacing: "-0.01em" }}>Granday</div>
+                  <div style={{ fontWeight: 800, fontSize: 17, letterSpacing: "-0.01em" }}>{OWNER.name}</div>
                   <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--yellow)", letterSpacing: "0.15em" }}>
                     SOFTWARE ENGINEER
                   </div>
@@ -203,7 +203,7 @@ function SiteFooter({ onNavigate }) {
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, lineHeight: 1.9 }}>
               <div style={{ color: "var(--text-dim)" }}><span style={{ color: "var(--yellow)", opacity: 0.6 }}>&gt; </span>system.initialize()</div>
               <div style={{ color: "var(--text-dim)" }}><span style={{ color: "var(--yellow)", opacity: 0.6 }}>&gt; </span>fetching_latest.build...</div>
-              <div style={{ color: "var(--yellow)", opacity: 0.75 }}><span>&gt; </span>granday_portfolio_v1.0.2.stable</div>
+              <div style={{ color: "var(--yellow)", opacity: 0.75 }}><span>&gt; </span>{OWNER.name.toLowerCase()}_portfolio_v1.0.2.stable</div>
             </div>
           </div>
         </div>
@@ -211,7 +211,7 @@ function SiteFooter({ onNavigate }) {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-dim)", letterSpacing: "0.1em" }}>
-            © {new Date().getFullYear()} GRANDAY STUDIO
+            © {new Date().getFullYear()} {OWNER.name.toUpperCase()} STUDIO
           </div>
           <div style={{ display: "flex", gap: 24 }}>
             {["PRIVACY POLICY", "LEGAL TERMS"].map(t => (
@@ -238,7 +238,7 @@ function SiteFooter({ onNavigate }) {
             >↑</button>
             <div style={{ textAlign: "right" }}>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-dim)", letterSpacing: "0.1em" }}>DEVELOPED &amp; DESIGN BY</div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--yellow)", letterSpacing: "0.08em", fontWeight: 700 }}>ALEX DEV</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--yellow)", letterSpacing: "0.08em", fontWeight: 700 }}>{OWNER.name.toUpperCase()} DEV</div>
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
           </FadeIn>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(260px, 1fr))", gap:16 }}>
+          <div className="skills-grid">
             {SKILLS.map((sk, i) => (
               <FadeIn key={sk.title} delay={i * 0.07}>
                 <div className="skill-card" style={{ "--skill-color": sk.color }}>

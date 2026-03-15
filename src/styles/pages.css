@@ -265,22 +265,159 @@
   align-items: flex-start;
 }
 
-/* ── Contact two-column ───────────────────────────────── */
-.contact-grid {
-  grid-template-columns: 1fr 1fr;
+/* ── Skills grid ─────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
 }
 
 /* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .hero { padding: 100px 24px 60px; }
+  .hero-typewriter { font-size: clamp(72px, 8vw, 100px); }
+  .hero-desc { font-size: 17px; max-width: 500px; }
+  .hero-ctas { gap: 12px; flex-wrap: wrap; }
+}
+
 @media (max-width: 960px) {
   .projects-grid,
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .about-bio-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-grid { grid-template-columns: 1fr !important; }
+  .hero { padding: 80px 20px 50px; }
+  .hero-typewriter { font-size: clamp(60px, 10vw, 80px); }
+  .hero-desc { font-size: 16px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
+
+@media (max-width: 768px) {
+  .hero { padding: 60px 16px 40px; min-height: auto; }
+  .hero-typewriter { font-size: clamp(48px, 12vw, 64px); }
+  .hero-desc { font-size: 15px; margin-bottom: 32px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+
+  .projects-section { padding: 48px 0; }
+  .projects-grid { gap: 20px; }
+  .blog-section { padding: 48px 0; }
+  .blog-grid { gap: 20px; }
+  .about-section { padding: 48px 0; }
+  .contact-section { padding: 48px 0; }
+
+  .skills-grid { grid-template-columns: 1fr; gap: 12px; }
+  .skill-card { padding: 16px; }
+  .skill-title { font-size: 16px; }
+  .skill-desc { font-size: 13px; }
+}
+
 @media (max-width: 640px) {
   .projects-grid,
   .blog-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 100px 0 48px; }
   .about-bio-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-grid { grid-template-columns: 1fr !important; }
+
+  .hero { padding: 40px 12px 30px; }
+  .hero-typewriter { font-size: clamp(36px, 14vw, 48px); }
+  .hero-desc { font-size: 14px; margin-bottom: 24px; }
+
+  .projects-grid { gap: 16px; }
+  .blog-grid { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 32px 8px 24px; }
+  .hero-typewriter { font-size: clamp(28px, 16vw, 36px); }
+  .hero-desc { font-size: 13px; }
+
+  .page-hero { padding: 80px 0 32px; }
+  .page-title { font-size: clamp(24px, 8vw, 32px); }
+  .page-subtitle { font-size: 14px; }
+
+  .about-bio-grid { gap: 24px; }
+  .about-photo { max-width: 280px; }
+  .about-text h2 { font-size: clamp(20px, 6vw, 28px); }
+  .about-text p { font-size: 14px; }
+  .about-buttons { flex-direction: column; gap: 8px; }
+  .about-social { justify-content: center; }
+
+  .contact-form { gap: 16px; }
+  .contact-form input,
+  .contact-form textarea { font-size: 16px; } /* Prevent zoom on iOS */
+}
+
+/* ── Blog Detail Styles ───────────────────────────────── */
+.blog-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 32px 0 16px 0;
+  color: var(--text);
+}
+
+.blog-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 24px 0 12px 0;
+  color: var(--text);
+}
+
+.blog-content p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.blog-content ul, .blog-content ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.blog-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.blog-content pre {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.blog-content code {
+  background: var(--bg2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid var(--yellow);
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .blog-content { padding: 24px; }
+  .blog-content h2 { font-size: 24px; margin: 24px 0 12px 0; }
+  .blog-content h3 { font-size: 20px; margin: 20px 0 10px 0; }
+  .blog-content p { font-size: 15px; margin-bottom: 14px; }
+  .blog-content pre { padding: 12px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .blog-content { padding: 16px; }
+  .blog-content h2 { font-size: 20px; }
+  .blog-content h3 { font-size: 18px; }
+  .blog-content p { font-size: 14px; }
+  .blog-content ul, .blog-content ol { padding-left: 20px; }
+  .blog-content pre { padding: 10px; font-size: 12px; }
 }

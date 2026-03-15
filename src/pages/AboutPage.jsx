@@ -83,7 +83,7 @@ export default function AboutPage({ onNavigate }) {
                 margin: "0 auto",
               }}>
                 {OWNER.avatar ? (
-                  <img src={OWNER.avatar} alt={OWNER.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={OWNER.avatar} alt={OWNER.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", transform: "scale(1.1)" }} />
                 ) : (
                   <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)" }}>
                     <div style={{ fontSize: 72, fontWeight: 900, color: "var(--yellow)", opacity: 0.8 }}>{OWNER.initials}</div>
