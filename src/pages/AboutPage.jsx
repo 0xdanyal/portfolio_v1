@@ -54,7 +54,7 @@ export default function AboutPage({ onNavigate }) {
   const downloadCV = () => {
     const a = document.createElement("a");
     a.href = "/danyal_FS_CV.pdf";
-    a.download = "CV.pdf";
+    a.download = "danyal_CV.pdf";
     a.click();
   };
 

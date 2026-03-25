@@ -19,7 +19,7 @@ export const OWNER = {
   availability: "Available for Freelance",
   email: "dkdanyal456@gmail.com",
   location: "Islamabad, Pakistan · Remote-ready",
-  avatar: "/pfp2.jpeg", // replace with your image URL e.g. "/pfp.jpg"
+  avatar: "/pfp.png", // replace with your image URL e.g. "/pfp.jpg"
   social: {
     github:   "https://github.com/0xdanyal",
     linkedin: "https://linkedin.com/in/danyal-dev",
